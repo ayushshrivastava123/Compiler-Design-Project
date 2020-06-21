@@ -1,0 +1,37 @@
+HOW TO RUN THE PROJECT:
+
+
+1. Download the following files from the zip folder:
+	Pass1Visitor.h
+	Pass1Visitor.cpp
+	Pass2Visitor.h
+	Pass2Visitor.cpp
+	Cpas.g4
+	Main.cpp
+	sample.expr
+
+Since some files/classes are also imported from pascal, you would require the WCI folder to run them.
+
+2. Now create a C++ project using an IDE (eclipse preferred) and copy all the files mentioned above into that folder.
+Download and link all the associated ANTLR/Boost files and runtime libraries into the project.
+
+3. In order to generate the ANTLR files for Cpas.g4, run configurations and change the language to C++ and build the project. After running, ANTLR should automatically generate the required C++ files to run Cpas.
+
+4. Once done, the project is finally ready to run the .expr files that generate the .j code. 
+
+5. Once you have the .j file generated, you can run it in your terminal to create the java class and eventually see the output of the sample expression source files.
+
+6.
+ASSEMBLING:
+
+java -jar /your/path/to/jasmin.jar Cpas.j
+
+This should create a class named Cpas.class.
+
+TO EXECUTE the sample program onto the Java Virtual Machine:
+
+Mac and Linux:   java -cp .:/your/path/to/PascalRTL.jar Cpas
+Windows:         java -cp .;/your/path/to/PascalRTL.jar Cpas
+
+
+The display should now be on the terminal screen with the expected outputs as well as the execution time.
